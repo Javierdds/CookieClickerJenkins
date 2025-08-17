@@ -30,5 +30,11 @@ pipeline {
                 archiveArtifacts artifacts: 'Build/**/*', fingerprint: true
             }
         }
+        
+        stage('Deploy') {
+            bat """
+                butler push "${pwd()/Build} Javisin/hgfsfasdfasdf:windows
+            """
+        }
     }
 }
