@@ -34,7 +34,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 bat """
-                    butler push "${pwd()/Build} Javisin/hgfsfasdfasdf:windows
+                    butler push "${pwd()}/Build" Javisin/hgfsfasdfasdf:windows
                 """
             }
         }
