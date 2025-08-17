@@ -32,9 +32,11 @@ pipeline {
         }
         
         stage('Deploy') {
-            bat """
-                butler push "${pwd()/Build} Javisin/hgfsfasdfasdf:windows
-            """
+            steps {
+                bat """
+                    butler push "${pwd()/Build} Javisin/hgfsfasdfasdf:windows
+                """
+            }
         }
     }
 }
